@@ -14,7 +14,7 @@ public class empObjectDirector : MonoBehaviour
     public GameObject objBackGround;
     /// <summary>視覚的クラッカーと紐のずれ</summary>
     private const float REGULATE_POS_X = 3.5f;
-    //紐の幅
+    /// <summary>紐の横幅</summary>
     private const float STRING_WIDTH = 10.0f;
     /// <summary>ゲームスタートフラグ</summary>
     public static bool isStart = false;
@@ -27,10 +27,7 @@ public class empObjectDirector : MonoBehaviour
         //背景画像のサイズ
         RectTransform backRect = objBackGround.GetComponent<RectTransform>();
         backRect.sizeDelta = new Vector2(Screen.width, Screen.height);
-
-        //クラッカーの
-        //RectTransform crkRect = objCracker.GetComponent<RectTransform>();
-
+        
         //紐のサイズ
         RectTransform strRect = objString.GetComponent<RectTransform>();
         strRect.sizeDelta = new Vector2(STRING_WIDTH, Screen.height / 2);
@@ -49,13 +46,7 @@ public class empObjectDirector : MonoBehaviour
 
         crackerSet();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
+    
     /// <summary>
     /// クラッカーを初期状態にします
     /// </summary>

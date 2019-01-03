@@ -18,20 +18,25 @@ public class GameDirector : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        //画面をタップした場合
         if (Input.GetMouseButtonDown(0))
         {
             gameObj.GetComponent<AudioBox>().audioStop();
             movePlayscene();
         }
     }
-
-    //タイトルシーンに遷移する
+    
+    /// <summary>
+    /// タイトルシーンに遷移
+    /// </summary>
     public void moveTitleScene()
     {
         SceneManager.LoadScene("titleScene");
     }
-
-    //プレイシーンに遷移する
+    
+    /// <summary>
+    /// プレイシーンに遷移する
+    /// </summary>
     public void movePlayscene()
     {
         SceneManager.LoadScene("playScene");

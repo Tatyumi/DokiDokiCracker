@@ -5,35 +5,33 @@ using UnityEngine.UI;
 
 public class imgString : MonoBehaviour
 {
-    //プルガイド
+    /// <summary>プルガイド</summary>
     public GameObject pullGuide;
-    //エンドパネル
+    /// <summary>エンドパネル</summary>
     public GameObject endPanel;
-    //エンドエフェクト
+    /// <summary>エンドエフェクト</summary>
     public GameObject endEffectObj;
     /// <summary>クラッカーの紐の画像</summary>
     public Image imageString;
     /// <summary>empObjectDirectorをゲームオブジェクトにアタッチ</summary>
-    //GameObject eObj;
     public GameObject eObj;
+    /// <summary></summary>
     private empObjectDirector eoScript;
-    /// <summary>クラッカーの画像</summary>
-    //public GameObject Cracker;
-    ///紐の初期fillamont値
+    /// <summary>クラッカーの紐の長さ</summary>
     private const float STRING_FILLAMOUNT = 0.35f;
-    //紐の引く速さ
+    /// <summary>クラッカーの紐を引く速さ</summary>
     private const float STRING_PULL = 0.004f;
-    //紐の長さの最大値
+    /// <summary>クラッカーの紐の最大の長さ</summary>
     private const float MAX_STRING_FILLAMOUNT = 1.0f;
-    //紐の限界の長さ
+    /// <summary>クラッカーが発射される紐の長さ</summary>
     private float limitFillAmount = 0.0f;
-    //ゲームエンド間での時間（クラッカー発射後から終了表示までの時間）
+    /// <summary>ゲームエンド間での時間（クラッカー発射後から終了表示までの時間）</summary>
     private const int END_TIME = 110;
-    //ゲームエンド間での間をカウント
+    /// <summary>ゲームエンド間での間をカウント</summary>
     private int count = 0;
-    //ゲームが終了したかどうか判定を行う
+    /// <summary>ゲームが終了したかどうか判定を行う</summary>
     private bool isGameEnd = false;
-    //タップした位置
+    /// <summary>タップした位置</summary>
     Vector2 touchPos = new Vector2(0, 0);
     private GameObject audioObj;
 
@@ -132,7 +130,5 @@ public class imgString : MonoBehaviour
                 count++;
             }
         }
-
-
     }
 }

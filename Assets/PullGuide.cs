@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PullGuide : MonoBehaviour {
+public class PullGuide : MonoBehaviour
+{
+
     private float nextTime;
-    public float interval = 1.0f;   // 点滅周期
+    /// <summary>点滅秋期</summary>
+    public float interval = 1.0f;
+
 
     // Use this for initialization
     void Start()

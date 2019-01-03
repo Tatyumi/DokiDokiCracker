@@ -3,21 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class imgCracker : MonoBehaviour {
+public class imgCracker : MonoBehaviour
+{
 
     /// <summary>クラッカーの画像</summary>
     public Image imageCracker;
     /// <summary>クラッカーの初期FILLOUT値</summary>
     private const float CRACKER_FILLAMOUNT = 0.97f;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         imageCracker.fillAmount = CRACKER_FILLAMOUNT;
 
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    }
 }
