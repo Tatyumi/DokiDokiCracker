@@ -643,7 +643,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 114048277268420556, guid: 63ec0035b0e1ce34b98e010c2b3c0011,
           type: 2}
-        m_MethodName: movePlayscene
+        m_MethodName: MovePlayscene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -940,7 +940,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 114048277268420556, guid: 63ec0035b0e1ce34b98e010c2b3c0011,
           type: 2}
-        m_MethodName: moveTitleScene
+        m_MethodName: MoveTitleScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -22,14 +22,14 @@ public class GameDirector : MonoBehaviour {
         if (Input.GetMouseButtonDown(0))
         {
             gameObj.GetComponent<AudioBox>().StopMusic();
-            movePlayscene();
+            MovePlayscene();
         }
     }
     
     /// <summary>
     /// タイトルシーンに遷移
     /// </summary>
-    public void moveTitleScene()
+    public void MoveTitleScene()
     {
         SceneManager.LoadScene("titleScene");
     }
@@ -37,7 +37,7 @@ public class GameDirector : MonoBehaviour {
     /// <summary>
     /// プレイシーンに遷移する
     /// </summary>
-    public void movePlayscene()
+    public void MovePlayscene()
     {
         SceneManager.LoadScene("playScene");
     }
