@@ -44,13 +44,13 @@ public class empObjectDirector : MonoBehaviour
         //紐の初期位置
         objString.transform.position = new Vector2(Screen.width/2, Screen.height / 2);
 
-        crackerSet();
+        SetCracker();
     }
     
     /// <summary>
     /// クラッカーを初期状態にします
     /// </summary>
-    public void crackerSet()
+    public void SetCracker()
     {
         objCracker.SetActive(true);
         objCrackerFire.SetActive(false);
@@ -59,7 +59,7 @@ public class empObjectDirector : MonoBehaviour
     /// <summary>
     /// クラッカーを発射状態にします
     /// </summary>
-    public void crackerFire()
+    public void FireCracker()
     {
         objCracker.SetActive(false);
         objCrackerFire.SetActive(true);

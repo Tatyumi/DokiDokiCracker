@@ -12,7 +12,7 @@ public class GameDirector : MonoBehaviour {
     {
         gameObj = GameObject.Find("AudioBox");
         //タイトルのBGMを再生
-        gameObj.GetComponent<AudioBox>().TitleBgmSart();
+        gameObj.GetComponent<AudioBox>().StartTitleBgm();
     }
 
     // Update is called once per frame
@@ -21,7 +21,7 @@ public class GameDirector : MonoBehaviour {
         //画面をタップした場合
         if (Input.GetMouseButtonDown(0))
         {
-            gameObj.GetComponent<AudioBox>().audioStop();
+            gameObj.GetComponent<AudioBox>().StopMusic();
             movePlayscene();
         }
     }

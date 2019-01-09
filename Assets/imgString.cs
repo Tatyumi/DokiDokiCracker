@@ -46,7 +46,7 @@ public class imgString : MonoBehaviour
         audioObj = GameObject.Find("AudioBox");
 
         //プレイシーンののBGMを再生
-        audioObj.GetComponent<AudioBox>().PlayBgmSart();
+        audioObj.GetComponent<AudioBox>().StartPlayBgm();
         //現在時刻の取得
         nextTime = Time.time;
         //eObj = GameObject.Find("ObjectDirector");
@@ -81,10 +81,10 @@ public class imgString : MonoBehaviour
                 //紐の長さが限界値か判別
                 if (imageString.fillAmount > limitFillAmount)
                 {
-                    eoScript.crackerFire();
+                    eoScript.FireCracker();
                     Debug.Log("BAN!");
-                    audioObj.GetComponent<AudioBox>().audioStop();
-                    audioObj.GetComponent<AudioBox>().CrackerFire();
+                    audioObj.GetComponent<AudioBox>().StopMusic();
+                    audioObj.GetComponent<AudioBox>().StartCrackerFire();
                     isGameEnd = true;
 
                     //端末がバイブレーション対応かどうか判別

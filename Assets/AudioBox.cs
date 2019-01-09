@@ -22,7 +22,7 @@ public class AudioBox : MonoBehaviour
     /// <summary>
     /// タイトルシーンのBGMを再生
     /// </summary>
-    public void TitleBgmSart()
+    public void StartTitleBgm()
     {
         audioSource = GetComponent<AudioSource>();
         audioSource.PlayOneShot(titleBgm, 0.5f);
@@ -31,7 +31,7 @@ public class AudioBox : MonoBehaviour
     /// <summary>
     /// 音を停止
     /// </summary>
-    public void audioStop()
+    public void StopMusic()
     {
         audioSource.Stop();
     }
@@ -39,7 +39,7 @@ public class AudioBox : MonoBehaviour
     /// <summary>
     /// プレイシーンのBGMを再生
     /// </summary>
-    public void PlayBgmSart()
+    public void StartPlayBgm()
     {
         audioSource = GetComponent<AudioSource>();
         audioSource.PlayOneShot(playBgm, 0.5f);
@@ -48,7 +48,7 @@ public class AudioBox : MonoBehaviour
     /// <summary>
     /// クラッカーの発射音を再生
     /// </summary>
-    public void CrackerFire()
+    public void StartCrackerFire()
     {
         audioSource = GetComponent<AudioSource>();
         audioSource.PlayOneShot(crackerFire, 0.5f);
