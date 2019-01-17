@@ -37,10 +37,7 @@ public class empObjectDirector : MonoBehaviour
 
         //発射クラッカーの初期位置
         objCrackerFire.transform.position = objCracker.transform.position;
-
-        //紐の縦座標
-        //float stringPosY = (crkRect.sizeDelta.y / 2) * -1;
-
+        
         //紐の初期位置
         objString.transform.position = new Vector2(Screen.width/2, Screen.height / 2);
 
