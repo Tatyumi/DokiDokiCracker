@@ -31,7 +31,7 @@ public class GameDirector : MonoBehaviour {
     /// </summary>
     public void MoveTitleScene()
     {
-        SceneManager.LoadScene("titleScene");
+        SceneManager.LoadScene("TitleScene");
     }
     
     /// <summary>
@@ -39,7 +39,7 @@ public class GameDirector : MonoBehaviour {
     /// </summary>
     public void MovePlayscene()
     {
-        SceneManager.LoadScene("playScene");
+        SceneManager.LoadScene("PlayScene");
     }
 
 }
