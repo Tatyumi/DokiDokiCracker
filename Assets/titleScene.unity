@@ -525,9 +525,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3cff22de85933b439d65c4a654fee61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  titleBgm: {fileID: 8300000, guid: c8f1cd7bbc48fb845abce365056ad068, type: 3}
-  crackerFire: {fileID: 8300000, guid: be607407d8eb8b14f9c58eefd3dc1343, type: 3}
-  playBgm: {fileID: 8300000, guid: 91707d75b6a9f444ebe1a7b4fa8a6078, type: 3}
+  TitleBgm: {fileID: 8300000, guid: c8f1cd7bbc48fb845abce365056ad068, type: 3}
+  CrackerFire: {fileID: 8300000, guid: be607407d8eb8b14f9c58eefd3dc1343, type: 3}
+  PlayBgm: {fileID: 8300000, guid: 91707d75b6a9f444ebe1a7b4fa8a6078, type: 3}
 --- !u!1 &1372589882
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,11 +6,11 @@ public class AudioBox : MonoBehaviour
 {
     AudioSource audioSource;
     /// <summary>田井徹画面のBGM</summary>
-    public AudioClip titleBgm;
+    public AudioClip TitleBgm;
     /// <summary>クラッカーの発射音</summary>
-    public AudioClip crackerFire;
+    public AudioClip CrackerFire;
     /// <summary>プレイシーンのBGM</summary>
-    public AudioClip playBgm;
+    public AudioClip PlayBgm;
 
     // Use this for initialization
     void Start()
@@ -25,7 +25,7 @@ public class AudioBox : MonoBehaviour
     public void StartTitleBgm()
     {
         audioSource = GetComponent<AudioSource>();
-        audioSource.PlayOneShot(titleBgm, 0.5f);
+        audioSource.PlayOneShot(TitleBgm, 0.5f);
     }
 
     /// <summary>
@@ -42,7 +42,7 @@ public class AudioBox : MonoBehaviour
     public void StartPlayBgm()
     {
         audioSource = GetComponent<AudioSource>();
-        audioSource.PlayOneShot(playBgm, 0.5f);
+        audioSource.PlayOneShot(PlayBgm, 0.5f);
     }
 
     /// <summary>
@@ -51,6 +51,6 @@ public class AudioBox : MonoBehaviour
     public void StartCrackerFire()
     {
         audioSource = GetComponent<AudioSource>();
-        audioSource.PlayOneShot(crackerFire, 0.5f);
+        audioSource.PlayOneShot(CrackerFire, 0.5f);
     }
 }
