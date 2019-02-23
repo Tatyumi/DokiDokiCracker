@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// オーディオ管理クラス．シングルトン．
 public class AudioManager : SingletonMonoBehaviour<AudioManager>
 {
     AudioSource audioSource;
@@ -23,16 +24,10 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
             return;
         }
 
-
         //シーンが遷移しても破棄されない
         DontDestroyOnLoad(gameObject);
 
         audioSource = gameObject.GetComponent<AudioSource>();
-
-        if (PlaySceneBGM)
-        {
-            Debug.Log("よし");
-        }
 
         // オウディオを格納
         AudioDic = new Dictionary<string, AudioClip> {
@@ -41,20 +36,6 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
             { PlaySceneBGM.name, PlaySceneBGM },
         };
     }
-
-    // Use this for initialization
-    void Start()
-    {
-    }
-
-    /// <summary>
-    /// タイトルシーンのBGMを再生
-    /// </summary>
-    //public void StartTitleBgm()
-    //{
-    //    audioSource = GetComponent<AudioSource>();
-    //    audioSource.PlayOneShot(TitleBGM, 0.5f);
-    //}
 
     /// <summary>
     /// 音を流す
@@ -79,21 +60,4 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
         audioSource.Stop();
     }
 
-    /// <summary>
-    /// プレイシーンのBGMを再生
-    /// </summary>
-    //public void StartPlayBgm()
-    //{
-    //    audioSource = GetComponent<AudioSource>();
-    //    audioSource.PlayOneShot(PlayBGM, 0.5f);
-    //}
-
-    /// <summary>
-    /// クラッカーの発射音を再生
-    /// </summary>
-    //public void StartCrackerFire()
-    //{
-    //    audioSource = GetComponent<AudioSource>();
-    //    audioSource.PlayOneShot(CrackerFire, 0.5f);
-    //}
 }
