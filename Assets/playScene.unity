@@ -577,7 +577,7 @@ GameObject:
   - component: {fileID: 825739478}
   - component: {fileID: 825739477}
   m_Layer: 5
-  m_Name: BtnYes
+  m_Name: YesButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -874,7 +874,7 @@ GameObject:
   - component: {fileID: 1049400359}
   - component: {fileID: 1049400358}
   m_Layer: 5
-  m_Name: BtnNo
+  m_Name: NoButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
