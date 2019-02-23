@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Common;
+
 
 public class StringController : MonoBehaviour
 {
@@ -40,13 +42,17 @@ public class StringController : MonoBehaviour
     //プルのレンダー切り替えフラグ
     private bool isPullRen = true;
 
+    private void Awake()
+    {
+        audioObj = GameObject.Find(Constans.AUDIO_MANAGER);
+    }
+
     // Use this for initialization
     void Start()
     {
-        audioObj = GameObject.Find("AudioBox");
-
+        
         //プレイシーンののBGMを再生
-        audioObj.GetComponent<AudioBox>().StartPlayBgm();
+        audioObj.GetComponent<AudioManager>().PlaySound(Constans.PLAY_SCENE_BGM);
         //現在時刻の取得
         nextTime = Time.time;
         PlayDirector = PlayObj.GetComponent<PlayDirector>();
@@ -82,8 +88,8 @@ public class StringController : MonoBehaviour
                 {
                     PlayDirector.FireCracker();
                     Debug.Log("BAN!");
-                    audioObj.GetComponent<AudioBox>().StopMusic();
-                    audioObj.GetComponent<AudioBox>().StartCrackerFire();
+                    audioObj.GetComponent<AudioManager>().StopSound();
+                    audioObj.GetComponent<AudioManager>().PlaySound(Constans.CRACKER_SCENE_SE);
                     isGameEnd = true;
 
                     //端末がバイブレーション対応かどうか判別

@@ -2,17 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Common;
 
 public class GameDirector : MonoBehaviour {
 
     private GameObject gameObj;
 
+    private void Awake()
+    {
+        gameObj = GameObject.Find(Constans.AUDIO_MANAGER);
+    }
+
     // Use this for initialization
     void Start()
     {
-        gameObj = GameObject.Find("AudioBox");
         //タイトルのBGMを再生
-        gameObj.GetComponent<AudioBox>().StartTitleBgm();
+        gameObj.GetComponent<AudioManager>().PlaySound(Constans.TITLE_SCENE_BGM);
     }
 
     // Update is called once per frame
@@ -21,7 +26,7 @@ public class GameDirector : MonoBehaviour {
         //画面をタップした場合
         if (Input.GetMouseButtonDown(0))
         {
-            gameObj.GetComponent<AudioBox>().StopMusic();
+            gameObj.GetComponent<AudioManager>().StopSound();
             MovePlayscene();
         }
     }
@@ -31,7 +36,7 @@ public class GameDirector : MonoBehaviour {
     /// </summary>
     public void MoveTitleScene()
     {
-        SceneManager.LoadScene("TitleScene");
+        SceneManager.LoadScene(Constans.TITLE_SCENE_NAME);
     }
     
     /// <summary>
@@ -39,7 +44,7 @@ public class GameDirector : MonoBehaviour {
     /// </summary>
     public void MovePlayscene()
     {
-        SceneManager.LoadScene("PlayScene");
+        SceneManager.LoadScene(Constans.PLAY_SCENE_NAME);
     }
 
 }
