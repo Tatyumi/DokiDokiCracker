@@ -8,11 +8,11 @@ namespace Common
     public static class Constans
     {
         //サウンド名
-        /// <summary></summary>
+        /// <summary>タイトルシーンBGM</summary>
         public const string TITLE_SCENE_BGM = "TitleSceneBGM";
-        /// <summary></summary>
+        /// <summary>プレイシーンBGM</summary>
         public const string PLAY_SCENE_BGM = "PlaySceneBGM";
-        /// <summary></summary>
+        /// <summary>クラッカー発射SE</summary>
         public const string CRACKER_SCENE_SE = "CrackerFireSE";
 
         // シーン名
