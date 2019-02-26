@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using Common;
 
 public class PlayDirector : MonoBehaviour
 {
@@ -61,5 +63,21 @@ public class PlayDirector : MonoBehaviour
     {
         Cracker.SetActive(false);
         CrackerFire.SetActive(true);
+    }
+    
+    /// <summary>
+     /// タイトルシーンに遷移
+     /// </summary>
+    public void MoveTitleScene()
+    {
+        SceneManager.LoadScene(Constans.TITLE_SCENE_NAME);
+    }
+
+    /// <summary>
+    /// プレイシーンに遷移する
+    /// </summary>
+    public void MovePlayscene()
+    {
+        SceneManager.LoadScene(Constans.PLAY_SCENE_NAME);
     }
 }

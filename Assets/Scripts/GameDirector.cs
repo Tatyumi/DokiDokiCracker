@@ -27,24 +27,8 @@ public class GameDirector : MonoBehaviour {
         if (Input.GetMouseButtonDown(0))
         {
             gameObj.GetComponent<AudioManager>().StopSound();
-            MovePlayscene();
+            SceneManager.LoadScene(Constans.PLAY_SCENE_NAME);
         }
     }
     
-    /// <summary>
-    /// タイトルシーンに遷移
-    /// </summary>
-    public void MoveTitleScene()
-    {
-        SceneManager.LoadScene(Constans.TITLE_SCENE_NAME);
-    }
-    
-    /// <summary>
-    /// プレイシーンに遷移する
-    /// </summary>
-    public void MovePlayscene()
-    {
-        SceneManager.LoadScene(Constans.PLAY_SCENE_NAME);
-    }
-
 }
