@@ -28,5 +28,13 @@ namespace Common
         public const float CRACKER_FILLAMOUNT = 0.97f;
         /// <summary>紐の横幅</summary>
         public const float STRING_WIDTH = 10.0f;
+        /// <summary>クラッカーの紐の長さ</summary>
+        public const float STRING_FILLAMOUNT = 0.35f;
+        /// <summary>クラッカーの紐を引く速さ</summary>
+        public const float STRING_PULL = 0.004f;
+        /// <summary>クラッカーの紐の最大の長さ</summary>
+        public const float MAX_STRING_FILLAMOUNT = 1.0f;
+        /// <summary>ゲームエンド間での時間（クラッカー発射後から終了表示までの時間）</summary>
+        public const int END_TIME = 110;
     }
 }
