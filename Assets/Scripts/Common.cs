@@ -7,7 +7,7 @@ namespace Common
     // 定数クラス
     public static class Constans
     {
-        //サウンド名
+        // サウンド名
         /// <summary>タイトルシーンBGM</summary>
         public const string TITLE_SCENE_BGM = "TitleSceneBGM";
         /// <summary>プレイシーンBGM</summary>
@@ -23,5 +23,8 @@ namespace Common
 
         // オブジェクト名
         public static string AUDIO_MANAGER = "AudioManager";
+
+        /// <summary>クラッカーの初期長さ</summary>
+        public const float CRACKER_FILLAMOUNT = 0.97f;
     }
 }
