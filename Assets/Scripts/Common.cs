@@ -26,5 +26,7 @@ namespace Common
 
         /// <summary>クラッカーの初期長さ</summary>
         public const float CRACKER_FILLAMOUNT = 0.97f;
+        /// <summary>紐の横幅</summary>
+        public const float STRING_WIDTH = 10.0f;
     }
 }

@@ -13,10 +13,6 @@ public class PlayDirector : MonoBehaviour
     public GameObject Cracker;
     /// <summary>発射クラッカー画像</summary>
     public GameObject CrackerFire;
-    /// <summary>視覚的クラッカーと紐のずれ</summary>
-    private const float REGULATE_POS_X = 3.5f;
-    /// <summary>紐の横幅</summary>
-    private const float STRING_WIDTH = 10.0f;
     /// <summary>ゲームスタートフラグ</summary>
     public static bool isStart = false;
 
@@ -27,7 +23,7 @@ public class PlayDirector : MonoBehaviour
 
         //紐のサイズ
         RectTransform strRect = String.GetComponent<RectTransform>();
-        strRect.sizeDelta = new Vector2(STRING_WIDTH, Screen.height / 2);
+        strRect.sizeDelta = new Vector2(Constans.STRING_WIDTH, Screen.height / 2);
 
         //クラッカーの初期値位置
         Cracker.transform.position = new Vector2(Screen.width / 2, Screen.height / 2);
