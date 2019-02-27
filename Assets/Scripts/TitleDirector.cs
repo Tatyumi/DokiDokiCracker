@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Common;
 
-public class GameDirector : MonoBehaviour {
+public class TitleDirector : MonoBehaviour {
 
     private GameObject gameObj;
 
