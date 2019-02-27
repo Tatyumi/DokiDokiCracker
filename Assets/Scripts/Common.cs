@@ -36,5 +36,7 @@ namespace Common
         public const float MAX_STRING_FILLAMOUNT = 1.0f;
         /// <summary>ゲームエンド間での時間（クラッカー発射後から終了表示までの時間）</summary>
         public const int END_TIME = 110;
+        /// <summary>ガイドテキストの点滅周期時間</summary>
+        public const float GUIDETEXT_DISPLAY_INTERVAL = 1.0f;
     }
 }

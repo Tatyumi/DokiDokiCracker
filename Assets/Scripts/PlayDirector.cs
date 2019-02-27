@@ -6,21 +6,28 @@ using Common;
 
 public class PlayDirector : MonoBehaviour
 {
-
     /// <summary>クラッカーの紐の画像</summary>
     public GameObject String;
     /// <summary>クラッカーの画像</summary>
     public GameObject Cracker;
     /// <summary>発射クラッカー画像</summary>
     public GameObject CrackerFire;
-    /// <summary>ゲームスタートフラグ</summary>
-    public static bool isStart = false;
+    /// <summary>エンドパネル</summary>
+    public GameObject ContinuePanel;
+    /// <summary>エンドエフェクト</summary>
+    public GameObject EndEffect;
+    
+    /// <summary>オーディオマネージャー</summary>
+    private AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.Find(Constans.AUDIO_MANAGER).GetComponent<AudioManager>();
+    }
 
     // Use this for initialization
     void Start()
     {
-        isStart = false;
-
         //紐のサイズ
         RectTransform strRect = String.GetComponent<RectTransform>();
         strRect.sizeDelta = new Vector2(Constans.STRING_WIDTH, Screen.height / 2);
@@ -34,6 +41,12 @@ public class PlayDirector : MonoBehaviour
         //紐の初期位置
         String.transform.position = new Vector2(Screen.width / 2, Screen.height / 2);
 
+        //終了演出に使用するオブジェクトを非表示
+        EndEffect.SetActive(false);
+        ContinuePanel.SetActive(false);
+
+        //プレイシーンののBGMを再生
+        audioManager.PlaySound(Constans.PLAY_SCENE_BGM);
         SetCracker();
     }
 
@@ -51,8 +64,22 @@ public class PlayDirector : MonoBehaviour
     /// </summary>
     public void FireCracker()
     {
+        // 効果音を発射音のみ再生する
+        audioManager.StopSound();
+        audioManager.PlaySound(Constans.CRACKER_SCENE_SE);
+
+        // 発射したクラッカーの画像に切り替える
         Cracker.SetActive(false);
         CrackerFire.SetActive(true);
+    }
+
+    /// <summary>
+    /// コンテニューパネルの表示
+    /// </summary>
+    public void DisplayCountinuePanel()
+    {
+        EndEffect.SetActive(true);
+        ContinuePanel.SetActive(true);
     }
     
     /// <summary>
