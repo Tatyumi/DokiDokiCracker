@@ -12,7 +12,7 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
     public AudioClip CrackerFire;
     /// <summary>プレイシーンのBGM</summary>
     public AudioClip PlaySceneBGM;
-    /// <summary>全オウディオ保持ディクショナリ</summary>
+    /// <summary>全オーディオ保持ディクショナリ</summary>
     private Dictionary<string, AudioClip> AudioDic;
 
     private void Awake()
@@ -29,7 +29,7 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
 
         audioSource = gameObject.GetComponent<AudioSource>();
 
-        // オウディオを格納
+        // オーディオを格納
         AudioDic = new Dictionary<string, AudioClip> {
             { TitleSceneBGM.name, TitleSceneBGM},
             { CrackerFire.name, CrackerFire },
