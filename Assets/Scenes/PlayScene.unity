@@ -1028,7 +1028,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c1ab01b577ef7a4f92d5f1c344ee37e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageCracker: {fileID: 1396144347}
+  ImageCracker: {fileID: 1396144347}
 --- !u!114 &1396144347
 MonoBehaviour:
   m_ObjectHideFlags: 0

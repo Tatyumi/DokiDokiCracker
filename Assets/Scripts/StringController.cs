@@ -24,17 +24,15 @@ public class StringController : MonoBehaviour
     private bool isGameEnd = false;
     /// <summary></summary>
     private float nextTime;
+    /// <summary>プルガイド表示フラグ</summary>
+    private bool isDisplayPullGuide = true;
 
     /// <summary>タップした位置</summary>
     Vector2 touchPos = new Vector2(0, 0);
 
-    /// <summary>プルのレンダー切り替えフラグ</summary>
-    private bool isPullRen = true;
-
     // Use this for initialization
     void Start()
     {
-
         // 現在時刻の取得
         nextTime = Time.time;
 
@@ -88,8 +86,8 @@ public class StringController : MonoBehaviour
                 // 一定の周期でガイドの表示を行う
                 if (Time.time > nextTime)
                 {
-                    PullGuide.SetActive(isPullRen);
-                    isPullRen = !isPullRen;
+                    PullGuide.SetActive(isDisplayPullGuide);
+                    isDisplayPullGuide = !isDisplayPullGuide;
                     nextTime += Constans.GUIDETEXT_DISPLAY_INTERVAL;
                 }
             }

@@ -6,13 +6,12 @@ using Common;
 
 public class CrackerController : MonoBehaviour
 {
-
     /// <summary>クラッカーの画像</summary>
-    public Image imageCracker;
+    public Image ImageCracker;
 
     // Use this for initialization
     void Start()
     {
-        imageCracker.fillAmount = Constans.CRACKER_FILLAMOUNT;
+        ImageCracker.fillAmount = Constans.CRACKER_FILLAMOUNT;
     }
 }

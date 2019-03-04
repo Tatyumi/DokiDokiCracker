@@ -6,13 +6,13 @@ using Common;
 
 public class PlayDirector : MonoBehaviour
 {
-    /// <summary>クラッカーの紐の画像</summary>
+    /// <summary>紐</summary>
     public GameObject String;
-    /// <summary>クラッカーの画像</summary>
+    /// <summary>クラッカー</summary>
     public GameObject Cracker;
     /// <summary>発射クラッカー画像</summary>
     public GameObject CrackerFire;
-    /// <summary>エンドパネル</summary>
+    /// <summary>コンティニューパネル</summary>
     public GameObject ContinuePanel;
     /// <summary>エンドエフェクト</summary>
     public GameObject EndEffect;
@@ -51,16 +51,17 @@ public class PlayDirector : MonoBehaviour
     }
 
     /// <summary>
-    /// クラッカーを初期状態にします
+    /// クラッカーを初期状態にする
     /// </summary>
     public void SetCracker()
     {
+        // 未発射のクラッカーを表示
         Cracker.SetActive(true);
         CrackerFire.SetActive(false);
     }
 
     /// <summary>
-    /// クラッカーを発射状態にします
+    /// クラッカーを発射する
     /// </summary>
     public void FireCracker()
     {
@@ -68,7 +69,7 @@ public class PlayDirector : MonoBehaviour
         audioManager.StopSound();
         audioManager.PlaySound(Constans.CRACKER_SCENE_SE);
 
-        // 発射したクラッカーの画像に切り替える
+        // 発射クラッカーを表示
         Cracker.SetActive(false);
         CrackerFire.SetActive(true);
     }
