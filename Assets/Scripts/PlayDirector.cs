@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Common;
+using CommonConstans;
 
 public class PlayDirector : MonoBehaviour
 {
@@ -22,7 +22,7 @@ public class PlayDirector : MonoBehaviour
 
     private void Awake()
     {
-        audioManager = GameObject.Find(Constans.AUDIO_MANAGER).GetComponent<AudioManager>();
+        audioManager = GameObject.Find(ObjectName.AUDIO_MANAGER).GetComponent<AudioManager>();
     }
 
     // Use this for initialization
@@ -30,7 +30,7 @@ public class PlayDirector : MonoBehaviour
     {
         //紐のサイズ
         RectTransform strRect = String.GetComponent<RectTransform>();
-        strRect.sizeDelta = new Vector2(Constans.STRING_WIDTH, Screen.height / 2);
+        strRect.sizeDelta = new Vector2(Value.STRING_WIDTH, Screen.height / 2);
 
         //クラッカーの初期値位置
         Cracker.transform.position = new Vector2(Screen.width / 2, Screen.height / 2);
@@ -46,7 +46,7 @@ public class PlayDirector : MonoBehaviour
         ContinuePanel.SetActive(false);
 
         //プレイシーンののBGMを再生
-        audioManager.PlaySound(Constans.PLAY_SCENE_BGM);
+        audioManager.PlaySound(SoundName.PLAY_SCENE_BGM);
         SetCracker();
     }
 
@@ -67,7 +67,7 @@ public class PlayDirector : MonoBehaviour
     {
         // 効果音を発射音のみ再生する
         audioManager.StopSound();
-        audioManager.PlaySound(Constans.CRACKER_SCENE_SE);
+        audioManager.PlaySound(SoundName.CRACKER_SCENE_SE);
 
         // 発射クラッカーを表示
         Cracker.SetActive(false);
@@ -88,7 +88,7 @@ public class PlayDirector : MonoBehaviour
      /// </summary>
     public void MoveTitleScene()
     {
-        SceneManager.LoadScene(Constans.TITLE_SCENE_NAME);
+        SceneManager.LoadScene(SceneName.TITLE_SCENE_NAME);
     }
 
     /// <summary>
@@ -96,6 +96,6 @@ public class PlayDirector : MonoBehaviour
     /// </summary>
     public void MovePlayscene()
     {
-        SceneManager.LoadScene(Constans.PLAY_SCENE_NAME);
+        SceneManager.LoadScene(SceneName.PLAY_SCENE_NAME);
     }
 }

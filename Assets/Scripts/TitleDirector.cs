@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Common;
+using CommonConstans;
 
 public class TitleDirector : MonoBehaviour {
 
@@ -10,14 +10,14 @@ public class TitleDirector : MonoBehaviour {
 
     private void Awake()
     {
-        gameObj = GameObject.Find(Constans.AUDIO_MANAGER);
+        gameObj = GameObject.Find(ObjectName.AUDIO_MANAGER);
     }
 
     // Use this for initialization
     void Start()
     {
         //タイトルのBGMを再生
-        gameObj.GetComponent<AudioManager>().PlaySound(Constans.TITLE_SCENE_BGM);
+        gameObj.GetComponent<AudioManager>().PlaySound(SoundName.TITLE_SCENE_BGM);
     }
 
     // Update is called once per frame
@@ -27,7 +27,7 @@ public class TitleDirector : MonoBehaviour {
         if (Input.GetMouseButtonDown(0))
         {
             gameObj.GetComponent<AudioManager>().StopSound();
-            SceneManager.LoadScene(Constans.PLAY_SCENE_NAME);
+            SceneManager.LoadScene(SceneName.PLAY_SCENE_NAME);
         }
     }
     

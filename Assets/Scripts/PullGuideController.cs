@@ -5,18 +5,16 @@ using UnityEngine.UI;
 
 public class PullGuideController : MonoBehaviour
 {
-    /// <summary>次動作までの間隔</summary>
-    private float nextTime;
     /// <summary>点滅秋期</summary>
     public float Interval = 1.0f;
-
-    // Use this for initialization
+    /// <summary>次動作までの間隔</summary>
+    private float nextTime;
+    
     void Start()
     {
         nextTime = Time.time;
     }
 
-    // Update is called once per frame
     void Update()
     {
         //次の動作時間に達した場合
