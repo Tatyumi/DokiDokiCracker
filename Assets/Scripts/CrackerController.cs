@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using CommonConstans;
+using Common;
 
 public class CrackerController : MonoBehaviour
 {
@@ -11,6 +11,6 @@ public class CrackerController : MonoBehaviour
     
     void Start()
     {
-        ImageCracker.fillAmount = Value.CRACKER_FILLAMOUNT;
+        ImageCracker.fillAmount = Constans.CRACKER_FILLAMOUNT;
     }
 }

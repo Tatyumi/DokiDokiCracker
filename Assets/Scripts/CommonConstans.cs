@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace CommonConstans
+namespace Common
 {
     public static class SoundName
     {
@@ -32,8 +32,8 @@ namespace CommonConstans
         public static string AUDIO_MANAGER = "AudioManager";
     }
 
-    // 値
-    public static class Value
+    // 定数
+    public static class Constans
     {
         /// <summary>クラッカーの初期長さ</summary>
         public const float CRACKER_FILLAMOUNT = 0.97f;

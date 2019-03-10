@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using CommonConstans;
+using Common;
 
 
 public class StringController : MonoBehaviour
@@ -37,10 +37,10 @@ public class StringController : MonoBehaviour
         nextTime = Time.time;
 
         // 紐の長さの初期化
-        Stringimg.fillAmount = Value.STRING_FILLAMOUNT;
+        Stringimg.fillAmount = Constans.STRING_FILLAMOUNT;
 
         // クラッカーが暴発する紐の長さ(ランダムで決めるようにする)
-        limitFillAmount = Random.Range(Value.STRING_FILLAMOUNT + 0.05f, Value.MAX_STRING_FILLAMOUNT);
+        limitFillAmount = Random.Range(Constans.STRING_FILLAMOUNT + 0.05f, Constans.MAX_STRING_FILLAMOUNT);
         Debug.Log(limitFillAmount);
 
     }
@@ -76,7 +76,7 @@ public class StringController : MonoBehaviour
                 // タップした箇所が下に移動しているか判別
                 if (touchPos.y > Input.mousePosition.y)
                 {
-                    Stringimg.fillAmount += Value.STRING_PULL;
+                    Stringimg.fillAmount += Constans.STRING_PULL;
                 }
                 // タップした位置のy座標を取得
                 touchPos.y = Input.mousePosition.y;
@@ -88,7 +88,7 @@ public class StringController : MonoBehaviour
                 {
                     PullGuide.SetActive(isDisplayPullGuide);
                     isDisplayPullGuide = !isDisplayPullGuide;
-                    nextTime += Value.GUIDETEXT_DISPLAY_INTERVAL;
+                    nextTime += Constans.GUIDETEXT_DISPLAY_INTERVAL;
                 }
             }
         }
@@ -97,7 +97,7 @@ public class StringController : MonoBehaviour
             // ゲーム終了の場合
 
             // ゲーム終了後一定時間が経ったか判別
-            if (count == Value.END_TIME)
+            if (count == Constans.END_TIME)
             {
                 // コンティニューパネルを表示
                 PlayDirector.DisplayCountinuePanel();

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using CommonConstans;
+using Common;
 
 public class PlayDirector : MonoBehaviour
 {
@@ -30,7 +30,7 @@ public class PlayDirector : MonoBehaviour
     {
         //紐のサイズ
         RectTransform strRect = String.GetComponent<RectTransform>();
-        strRect.sizeDelta = new Vector2(Value.STRING_WIDTH, Screen.height / 2);
+        strRect.sizeDelta = new Vector2(Constans.STRING_WIDTH, Screen.height / 2);
 
         //クラッカーの初期値位置
         Cracker.transform.position = new Vector2(Screen.width / 2, Screen.height / 2);
