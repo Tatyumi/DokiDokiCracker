@@ -6,18 +6,20 @@ using Common;
 
 public class TitleDirector : MonoBehaviour {
 
-    private GameObject gameObj;
+    //private GameObject audioManager;
+    private AudioManager audioManager;
 
     private void Awake()
     {
-        gameObj = GameObject.Find(ObjectName.AUDIO_MANAGER);
+        // オーディオマネージャー取得
+        audioManager = AudioManager.Instance;
     }
 
     // Use this for initialization
     void Start()
     {
         //タイトルのBGMを再生
-        gameObj.GetComponent<AudioManager>().PlaySound(SoundName.TITLE_SCENE_BGM);
+        audioManager.PlaySound(SoundName.TITLE_SCENE_BGM);
     }
 
     // Update is called once per frame
@@ -26,7 +28,7 @@ public class TitleDirector : MonoBehaviour {
         //画面をタップした場合
         if (Input.GetMouseButtonDown(0))
         {
-            gameObj.GetComponent<AudioManager>().StopSound();
+            audioManager.StopSound();
             SceneManager.LoadScene(SceneName.PLAY_SCENE_NAME);
         }
     }

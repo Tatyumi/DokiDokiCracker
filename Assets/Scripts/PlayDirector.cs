@@ -22,7 +22,8 @@ public class PlayDirector : MonoBehaviour
 
     private void Awake()
     {
-        audioManager = GameObject.Find(ObjectName.AUDIO_MANAGER).GetComponent<AudioManager>();
+        // オーディオマネージャー取得
+        audioManager = AudioManager.Instance;
     }
 
     // Use this for initialization
